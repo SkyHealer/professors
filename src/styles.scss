@@ -1,0 +1,432 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('./assets/css/site.scss');
+@font-face {
+  font-family: AbrilFatface;
+  src: url("./assets/font/AbrilFatface-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: Montserrat-Thin;
+  src: url("./assets/font/Montserrat-Thin.ttf") format("ttf");
+}
+
+*{
+  font-family: Montserrat-Thin
+}
+/*-------------------- begin global variable ---------*/
+$color-white: #fff;
+$color-black:#292D32;
+$color-link: #fff5b5;
+$bgcolor-black: #182231;
+$bgColor-header-black: #192332;
+$bgColor-footer: #f9f9f9;
+/*-------------------- end global variable ---------*/
+
+/*-------------------- begin global styles ----------------*/
+.navbar-dark{
+  .navbar-toggler{
+    color: none !important;
+    border-color: none !important;
+    &:focus{
+      box-shadow: none !important;
+    }
+  }
+}
+/*-------------------- end global styles ----------------*/
+
+/* ------------------------------- begin header-site --------------------------*/
+.header-site {
+  background: $bgColor-header-black;
+  /*------ begin media --------*/
+  @media (max-width:768px){
+    .mobile-header{
+      display: flex;
+      align-items: center;
+      padding: 15px 0px;
+    }
+  }
+  /*------ end media --------*/
+}
+.bg-img{
+  width: 100%;
+  /*------ begin media --------*/
+  @media (max-width: 768px){
+    height: 500px;
+  }
+  /*------ end media --------*/
+}
+
+.header-layout{
+  .navbar{
+    display: block;
+  }
+  .header-nav{
+    justify-content: space-between;
+    padding: 0;
+  }
+  .nav-left{
+    padding: 0px;
+    .item-logo{
+      display: flex;
+      align-items: center;
+      .logo-m{
+        background: linear-gradient(180deg, #FFF5B5 0%, rgba(255, 255, 255, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        height: 37px;
+        width: 42px;
+        margin-bottom: 0;
+      }
+      .logo-details{
+        margin-left: 8px;
+        .logo-fullname{
+          margin-bottom: 0;
+          color: $color-white;
+          // font-family: Montserrat-Regular;
+          font-size: 24px;
+          font-weight: bold;
+          line-height: normal;
+        }
+        .logo-detail-position{
+          margin-bottom: 0;
+          color: $color-white;
+        }
+
+      }
+      /*------ begin media ------*/
+      @media (max-width: 768px){
+        display: none;
+      }
+      /*------ end media -------*/
+    }
+  }
+  .nav-right{
+    .nav-item{
+      .nav-link{
+        color: $color-white;
+        cursor: pointer;
+        padding: 0px 8px;
+      }
+    }
+    /*------ begin media ------*/
+    @media (max-width:768px){
+      padding: 0;
+      .nav-item{
+        padding: 10px;
+      }
+    }
+    /*------ begin media ------*/
+  }
+  .logo-mobile{
+    /*------ begin media --------*/
+    @media (max-width:768px){
+      white-space: nowrap;
+      color: $color-white;
+      display: inline-flex;
+      .logo-details{
+        margin-left: 4px;
+        line-height: 17px;
+        .logo-fullname{
+          font-weight: bold;
+          margin: 0px;
+        }
+        .logo-detail-position{
+          font-size: 11px;
+          margin: 0px;
+        }
+      }
+    }
+    /*------ end media --------*/
+
+    /*------ begin media --------*/
+    @media (min-width: 768px) and (max-width: 2481px){
+      display: none;
+    }
+    /*------ end media --------*/
+  }
+}
+
+/* ------------------------------- end header-site -------------------------- */
+
+/*-------------------------------- begin footer site ---------------------------*/
+.footer-layout{
+  background: $bgColor-footer;
+  margin-top: 86px;
+  .footer-detail{
+    // padding: 50px 0px;
+    height: 200px;
+    .pic-footer{
+      display: flex;
+      align-items: center;
+      /*------ begin media --------*/
+      @media (max-width: 768px){
+        display: block;
+      }
+      /*------ end media --------*/
+      .pic{
+        display: contents;
+        .summary-desktop{
+          font-weight: bold;
+          transform: rotate(270deg);
+          display: inline-block;
+          font-size: 24px;
+          /*------ begin media --------*/
+          @media (max-width: 768px){
+            display: none;
+            // margin-top: 90px;
+            // display: block;
+            // transform: none;
+            // text-align: center;
+          }
+          /*------ end media --------*/
+        }
+        .summary-mobile{
+          display: none;
+          /*------ begin media --------*/
+          @media (max-width:768px){
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 900;
+          }
+          /*------ end media --------*/
+        }
+        .pic-summary{
+          margin-top: -37px;
+          .img-pro{
+            // position: absolute;
+            // left: 120px;
+            width: 168px;
+            height: 264px;
+          }
+          /*------ begin media --------*/
+          @media (max-width:768px){
+            text-align: center;
+            margin-top: 0;
+            .img-pro{
+              margin-top: -65px;
+            }
+          }
+          /*------ end media --------*/
+        }
+      }
+      .summary-footer{
+        margin-left: 24px;
+        /*------ begin media --------*/
+        @media (max-width: 768px){
+          margin: 0px;
+          text-align: left;
+          padding: 0 25px;
+        }
+        /*------ end media --------*/
+        .detail-prof{
+          width: 70%;
+          text-transform: capitalize;
+          /*------ begin media --------*/
+          @media (max-width: 768px){
+            width: 100%;
+          }
+          /*------ end media --------*/
+        }
+        .more-info{
+          text-transform: capitalize;
+          display: flex;
+          .value{
+            font-weight: 700;
+            color: $color-black;
+            text-decoration: none;
+          }
+          .job-title{
+            margin: 0px 15px;
+          }
+          .address-website , .about-company , .about-job{
+            margin-bottom: 0;
+          }
+          @media (max-width:768px){
+            margin-bottom: 10px;
+            display: block;
+            .job-title{
+              margin: 0;
+            }
+            .address-website , .about-company , .about-job{
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+    /*------ begin media --------*/
+    @media (max-width:768px){
+      padding: 0px;
+      margin-top: 100px;
+      height: auto;
+    }
+    /*------ end media --------*/
+  }
+  .footer{
+    background-color: $bgcolor-black;
+    padding: 25px 0px;
+    .owner{
+      text-align: center;
+      color: $color-white;
+      margin: 0;
+    }
+  }
+}
+/*-------------------------------- end footer site ---------------------------*/
+
+/*-------------------------------- begin home-page component ---------------------------*/
+.background-image{
+  background-image: url('assets/images/bg-guys.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width:768px){
+    background-size: 175% 100%;
+    background-position-x: center;
+  }
+}
+.research{
+  .research-mashine-learning{
+    @media (max-width: 768px){
+      order: 1;
+    }
+  }
+  .title{
+    font-weight: 800;
+    margin-bottom: 0;
+    margin-top: 50px;
+    @media (max-width:768px){
+      font-size: 40px;
+    }
+  }
+  .info-machine-learning{
+    // text-align: justify;
+    margin-right: 24px;
+    line-height: 30px;
+    @media (max-width:768px){
+      margin-right: 0%;
+      margin-top: 24px;
+    }
+  }
+  .img-machine-learning{
+    width: 100%;
+  }
+  .row-content{
+    margin-top: 366px;
+    margin-left: 118px;
+    @media (max-width:768px){
+      margin-top: 100px;
+      margin-left: 0px;
+    }
+  }
+  .content-prof{
+    display: flex;
+    @media(max-width: 768px){
+      display: block;
+    }
+  }
+  .img-profile{
+    border: 2px solid #fff;
+    width: 200px;
+    height: 303px;
+    position: relative;
+    // top: 63%;
+    // left: 11%;
+    .main-img{
+      position: relative;
+      bottom: 5%;
+      left: 6%;
+    }
+    /*---- begin media ----*/
+    @media (max-width: 768px){
+      border: 2px solid #fff;
+      width: 100px;
+      height: 158px;
+      .main-img {
+        width: 100px;
+        height: 158px;
+      }
+    }
+
+    /*---- end media ----*/
+  }
+  .profile-detail{
+    // position: absolute;
+    // top: 63%;
+    // left: 31%;
+    margin-left: 25px;
+    color: $color-white;
+    p{
+      margin-bottom: 0px;
+    }
+    a{
+      color: $color-link;
+    }
+    .name-professor{
+      font-family: AbrilFatface;
+      font-size: 60px;
+      font-weight: 900;
+    }
+    /*---- begin media ----*/
+    @media (max-width: 768px){
+      margin-left: 0;
+      color: #fff;
+      font-size: 10px;
+      .name-professor{
+        font-size: 40px;
+        margin: 10px 0 0 0;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+    /*---- end media ----*/
+  }
+  .down-page{
+    display: flex;
+    justify-content: center;
+  }
+  .scroll-form{
+    // text-align: center;
+    // margin-top: -75px;
+    margin: 60px 0 34px 0px;
+    padding: 0 0 0 36px;
+    color: $color-white;
+    .scroll-down{
+      // display: flex;
+      // justify-content: center;
+      // transform: rotate(90deg);
+      // position: absolute;
+      // top: 127%;
+      // left: 49%;
+      // padding: 0px;
+      // display: flex;
+      // margin-top: 66px;
+      // margin-right: 68px;
+      .input-scroll{
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        .form-check-input{
+          cursor: pointer;
+          margin: 0;
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .label-scroll{
+      // position: absolute;
+      // top: 133%;
+      // left: 48%;
+      color: $color-white;
+      /*------ begin media --------*/
+      // @media (max-width:768px){
+      //   margin: 10px 0 0 0;
+      // }
+      /*------ begin media --------*/
+    }
+  }
+
+}
+
+
+/*-------------------------------- end home-page component --------------------------*/
