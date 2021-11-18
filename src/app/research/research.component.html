@@ -1,0 +1,47 @@
+<section class="container section-research">
+  <div class="row">
+    <div class="col-12">
+      <div class="people">
+        <h3 class="set-title">
+          News
+          <svg height="8px" width="100%">
+            <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#EEEEEE;stroke-width:8" />
+            Sorry, your browser does not support inline SVG.
+          </svg>
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card card-research  mt-4" *ngFor="let item of itemResearch">
+        <img src="../../assets/images/img-serach1.png" class="card-img-top">
+        <div class="card-body body-research">
+          <h3 class="card-title">the fbi declassified</h3>
+          <p class="card-date">{{item.date}}</p>
+          <p class="card-text">{{item.text}}</p>
+          <a href="#" class="card-link">SEE MORE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12">
+      <nav aria-label="...">
+        <ul class="pagination">
+          <li class="page-item active" aria-current="page">
+            <span class="page-link">1</span>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"><a class="page-link" href="#">6</a></li>
+          <li class="page-item"><a class="page-link" href="#">7</a></li>
+          <li class="page-item"><a class="page-link" href="#">8</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</section>
