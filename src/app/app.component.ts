@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +8,5 @@ import { Component, ViewChild } from '@angular/core';
 export class AppComponent {
   title = 'professor-front';
 
-  @ViewChild('buttonClose') buttonClose:any;
-
-  onCloseNavbar(){
-    console.log(window.innerWidth);
-    if(window.innerWidth <768){
-      this.buttonClose.nativeElement.click();
-      console.log(window.innerWidth);
-    }
-  }
 }
 
