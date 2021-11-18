@@ -646,6 +646,9 @@ $bgColor-footer: #f9f9f9;
   .card-header{
     background-color: $color-white;
     border: none;
+    .header-title{
+      font-weight: bold;
+    }
   }
   .card-body{
     .img-body{
