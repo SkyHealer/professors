@@ -1,0 +1,57 @@
+<section class="container section-opening">
+  <!---------------------- begin opening-item ----------------------->
+  <div class="row">
+    <div class="col-2 col-md-2"></div>
+    <div class="col-12 col-md-8">
+      <div class="card card-opening">
+        <div class="card-header">
+          <h3 class="header-title">The FBI Declassified</h3>
+          <p class="header-date">Wed, 10 Jun 2020 15:22 PM</p>
+        </div>
+        <div class="card-body">
+          <div class="img-body">
+            <img class="img-content" src="../../assets/images/bg-flower.png" alt="flower">
+          </div>
+          <p class="card-text text-content">
+            Our research lies at the intersection of circuit design, machine learning, and neuroscience, and our mission is to develop new diagnostic and therapeutic devices for medication-resistant neurological disorders including epilepsy, alzheimer’s, ...Our research lies at the intersection of circuit design, machine learning, and neuroscience, and our mission is to develop new diagnostic and therapeutic devices for medication-resistant neurological disorders including epilepsy, alzheimer’s, ...
+          </p>
+          <p class="card-text">
+            Our research lies at the intersection of circuit design, machine learning, and neuroscience, and our  mission is to develop new diagnostic and therapeutic devices for medication-resistant neurological   disorders including epilepsy, alzheimer’s, ...
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-2 col-md-2"></div>
+  </div>
+  <!----------------------- end opening-item --------------------------->
+  <!----------------------- begin header-title-list ----------------------->
+  <div class="row">
+    <div class="col-12">
+      <div class="people">
+        <h3 class="set-title">
+          Recommend
+          <svg height="8px" width="100%">
+            <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#EEEEEE;stroke-width:8" />
+            Sorry, your browser does not support inline SVG.
+          </svg>
+        </h3>
+      </div>
+    </div>
+  </div>
+  <!----------------------- end header-title-list ----------------------->
+  <!----------------------- begin recommend-list ------------------------>
+  <div class="row">
+    <div class="col-12">
+      <div class="card card-research  mt-4" *ngFor="let item of itemResearch">
+        <img src="../../assets/images/img-serach1.png" class="card-img-top">
+        <div class="card-body body-research">
+          <h3 class="card-title">the fbi declassified</h3>
+          <p class="card-date">{{item.date}}</p>
+          <p class="card-text">{{item.text}}</p>
+          <a href="#" class="card-link">SEE MORE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!----------------------- end recommend-list ------------------------>
+</section>
