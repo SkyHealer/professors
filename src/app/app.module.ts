@@ -9,6 +9,7 @@ import { ResearchComponent } from './research/research.component';
 import { OpeningsComponent } from './openings/openings.component';
 import { HeaderSiteComponent } from './shared/components/header-site/header-site.component';
 import { FooterSiteComponent } from './shared/components/footer-site/footer-site.component';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 @NgModule({
   declarations: [
@@ -21,8 +22,9 @@ import { FooterSiteComponent } from './shared/components/footer-site/footer-site
     FooterSiteComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    AppRoutingModule,
+    LazyLoadImageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

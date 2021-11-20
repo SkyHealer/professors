@@ -18,7 +18,7 @@
   <div class="row">
     <div class="col-12">
       <div class="card card-research  mt-4" *ngFor="let item of itemResearch">
-        <img src="../../assets/images/img-serach1.png" class="card-img-top">
+        <img [lazyLoad]="'../../assets/images/img-serach1.png'" class="card-img-top">
         <div class="card-body body-research">
           <h3 class="card-title">the fbi declassified</h3>
           <p class="card-date">{{item.date}}</p>

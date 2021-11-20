@@ -10,7 +10,7 @@
         </div>
         <div class="card-body">
           <div class="img-body">
-            <img class="img-content" src="../../assets/images/bg-flower.png" alt="flower">
+            <img class="img-content" [lazyLoad]="'../../assets/images/bg-flower.png'" alt="flower">
           </div>
           <p class="card-text text-content">
             Our research lies at the intersection of circuit design, machine learning, and neuroscience, and our mission is to develop new diagnostic and therapeutic devices for medication-resistant neurological disorders including epilepsy, alzheimer’s, ...Our research lies at the intersection of circuit design, machine learning, and neuroscience, and our mission is to develop new diagnostic and therapeutic devices for medication-resistant neurological disorders including epilepsy, alzheimer’s, ...
@@ -43,7 +43,7 @@
   <div class="row">
     <div class="col-12">
       <div class="card card-research  mt-4" *ngFor="let item of itemResearch">
-        <img src="../../assets/images/img-serach1.png" class="card-img-top">
+        <img [lazyLoad]="'../../assets/images/img-serach1.png'" class="card-img-top">
         <div class="card-body body-research">
           <h3 class="card-title">the fbi declassified</h3>
           <p class="card-date">{{item.date}}</p>
